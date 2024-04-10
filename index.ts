@@ -17,7 +17,7 @@ if(ATM.pin === myPin){
         console.log(`Current Bal: ${bal}`)}
     }
     else if(operation.oper === "Fastcash"){console.log("\n")
-        let fastOp = await inquirer.prompt({message:chalk.green("****************** Options ******************"),type:"list",choices:["1000",'2000','5000','10000'],name:"choices"})
+        let fastOp = await inquirer.prompt({message:chalk.green("****************** Options ******************\n"),type:"list",choices:["1000",'2000','5000','10000'],name:"choices"})
         console.log(`Current Bal: ${myBal-fastOp.choices}`)
     }
     else{console.log("\n")

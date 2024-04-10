@@ -11,7 +11,7 @@ if (ATM.pin === myPin) {
         console.log("\n");
         let amount = await inquirer.prompt({ message: chalk.green(`****************** Enter Amount: ******************\n`), type: 'number', name: 'sum' });
         if (myBal - amount.sum < 0) {
-            console.log(chalk.red(chalk.bold(`****************** Insufficient Funds ******************`)));
+            console.log(chalk.red(chalk.bold(`\n****************** Insufficient Funds ******************`)));
             process.exit();
         }
         else {
@@ -21,7 +21,7 @@ if (ATM.pin === myPin) {
     }
     else if (operation.oper === "Fastcash") {
         console.log("\n");
-        let fastOp = await inquirer.prompt({ message: chalk.green("****************** Options ******************"), type: "list", choices: ["1000", '2000', '5000', '10000'], name: "choices" });
+        let fastOp = await inquirer.prompt({ message: chalk.green("****************** Options ******************\n"), type: "list", choices: ["1000", '2000', '5000', '10000'], name: "choices" });
         console.log(`Current Bal: ${myBal - fastOp.choices}`);
     }
     else {
